@@ -1,0 +1,527 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BitMan - IT-Support für Gewerbe und Produktion | Bern</title>
+    <meta name="description" content="BitMan – Ihr IT-Partner in Bern. 15 Jahre Erfahrung in Produktion und Gewerbe. IT-Support, Netzwerk, Infrastruktur. Jetzt unverbindlich anfragen.">
+    <meta name="keywords" content="IT Support Bern, IT Outsourcing KMU, IT Gewerbe, IT Produktion, Netzwerk Bern, IT Infrastruktur">
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-5SFLV35LLW"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-5SFLV35LLW');
+    </script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+
+        :root {
+            --primary: #1a1a2e;
+            --accent: #e94560;
+            --accent-hover: #d63851;
+            --text: #2d2d2d;
+            --text-light: #6b7280;
+            --bg: #ffffff;
+            --bg-alt: #f8f9fa;
+            --border: #e5e7eb;
+        }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            color: var(--text);
+            line-height: 1.6;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        /* NAV */
+        nav {
+            position: fixed; top: 0; width: 100%; z-index: 100;
+            background: rgba(255,255,255,0.95); backdrop-filter: blur(10px);
+            border-bottom: 1px solid var(--border);
+            padding: 1rem 2rem;
+            display: flex; justify-content: space-between; align-items: center;
+        }
+        .logo { display: flex; align-items: center; text-decoration: none; }
+        .logo-img { height: 40px; width: auto; }
+        .nav-actions {
+            display: flex; align-items: center; gap: 1rem;
+        }
+        .nav-link {
+            display: flex; align-items: center; gap: 0.4rem;
+            color: var(--text); text-decoration: none; font-size: 0.85rem;
+            font-weight: 500; padding: 0.4rem 0.7rem; border-radius: 6px;
+            transition: background 0.2s; cursor: pointer; border: none; background: none;
+            font-family: inherit;
+        }
+        .nav-link:hover { background: var(--bg-alt); }
+        .nav-link svg { width: 18px; height: 18px; }
+        .nav-link.whatsapp { color: #25D366; }
+        .nav-link.email-copy { position: relative; }
+        .nav-link .copied-toast {
+            position: absolute; top: 100%; left: 50%; transform: translateX(-50%);
+            background: var(--primary); color: white; font-size: 0.75rem;
+            padding: 0.3rem 0.6rem; border-radius: 4px; white-space: nowrap;
+            opacity: 0; transition: opacity 0.2s; pointer-events: none;
+        }
+        .nav-link .copied-toast.show { opacity: 1; }
+        nav a.cta-nav {
+            background: var(--accent); color: white; padding: 0.6rem 1.5rem;
+            border-radius: 6px; text-decoration: none; font-weight: 600; font-size: 0.9rem;
+            transition: background 0.2s;
+        }
+        nav a.cta-nav:hover { background: var(--accent-hover); }
+
+        /* HERO */
+        .hero {
+            padding: 8rem 2rem 4rem;
+            max-width: 900px; margin: 0 auto;
+            text-align: center;
+        }
+        .hero-badge {
+            display: inline-block; background: #fef2f2; color: var(--accent);
+            padding: 0.4rem 1rem; border-radius: 50px; font-size: 0.85rem;
+            font-weight: 600; margin-bottom: 1.5rem;
+        }
+        .hero h1 {
+            font-size: clamp(2rem, 5vw, 3.2rem);
+            font-weight: 800; line-height: 1.15;
+            color: var(--primary); margin-bottom: 1.5rem;
+        }
+        .hero p {
+            font-size: 1.15rem; color: var(--text-light);
+            max-width: 640px; margin: 0 auto 2rem;
+        }
+        .hero-cta {
+            display: inline-block; background: var(--accent); color: white;
+            padding: 1rem 2.5rem; border-radius: 8px; text-decoration: none;
+            font-weight: 700; font-size: 1.1rem; transition: all 0.2s;
+            box-shadow: 0 4px 14px rgba(233,69,96,0.3);
+        }
+        .hero-cta:hover { background: var(--accent-hover); transform: translateY(-1px); }
+        .hero-sub {
+            margin-top: 0.8rem; font-size: 0.85rem; color: var(--text-light);
+        }
+
+        /* TRUST BAR */
+        .trust-bar {
+            background: var(--bg-alt); padding: 2rem;
+            text-align: center; border-top: 1px solid var(--border);
+            border-bottom: 1px solid var(--border);
+        }
+        .trust-bar p { font-size: 0.9rem; color: var(--text-light); }
+        .trust-logos {
+            display: flex; justify-content: center; gap: 2.5rem;
+            flex-wrap: wrap; margin-top: 1rem;
+        }
+        .trust-item {
+            font-weight: 700; color: var(--primary); font-size: 0.95rem;
+            opacity: 0.6;
+        }
+
+        /* SECTIONS */
+        section { padding: 5rem 2rem; }
+        .container { max-width: 1000px; margin: 0 auto; }
+        .section-title {
+            font-size: 1.8rem; font-weight: 800; color: var(--primary);
+            margin-bottom: 0.5rem;
+        }
+        .section-sub {
+            color: var(--text-light); font-size: 1.05rem;
+            margin-bottom: 3rem;
+        }
+
+        /* PROBLEM SECTION */
+        .problem { background: var(--primary); color: white; }
+        .problem .section-title { color: white; }
+        .problem .section-sub { color: rgba(255,255,255,0.7); }
+        .problem-grid {
+            display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 1.5rem;
+        }
+        .problem-card {
+            background: rgba(255,255,255,0.08); border: 1px solid rgba(255,255,255,0.1);
+            border-radius: 12px; padding: 1.5rem;
+        }
+        .problem-card .icon { font-size: 1.8rem; margin-bottom: 0.8rem; }
+        .problem-card h3 { font-size: 1.05rem; margin-bottom: 0.5rem; }
+        .problem-card p { font-size: 0.9rem; color: rgba(255,255,255,0.7); line-height: 1.5; }
+
+        /* SERVICES */
+        .services-grid {
+            display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 1.5rem;
+        }
+        .service-card {
+            border: 1px solid var(--border); border-radius: 12px;
+            padding: 2rem; transition: all 0.2s;
+        }
+        .service-card:hover {
+            border-color: var(--accent); box-shadow: 0 4px 20px rgba(233,69,96,0.1);
+        }
+        .service-card .icon { font-size: 2rem; margin-bottom: 1rem; }
+        .service-card h3 { font-size: 1.1rem; font-weight: 700; margin-bottom: 0.5rem; }
+        .service-card p { font-size: 0.9rem; color: var(--text-light); }
+
+        /* WHY ME */
+        .why-grid {
+            display: grid; grid-template-columns: 1fr 1fr; gap: 3rem;
+            align-items: center;
+        }
+        .why-text h3 { font-size: 1.3rem; font-weight: 700; margin-bottom: 1rem; }
+        .why-text p { color: var(--text-light); margin-bottom: 1rem; }
+        .why-stats {
+            display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem;
+        }
+        .stat { text-align: center; }
+        .stat-number { font-size: 2.5rem; font-weight: 800; color: var(--accent); }
+        .stat-label { font-size: 0.85rem; color: var(--text-light); }
+
+        /* AUDIT CTA */
+        .audit {
+            background: linear-gradient(135deg, var(--primary) 0%, #16213e 100%);
+            color: white; text-align: center;
+        }
+        .audit h2 { font-size: 2rem; font-weight: 800; margin-bottom: 1rem; }
+        .audit p { color: rgba(255,255,255,0.8); max-width: 600px; margin: 0 auto 2rem; font-size: 1.05rem; }
+        .audit-steps {
+            display: flex; justify-content: center; gap: 2rem;
+            flex-wrap: wrap; margin-bottom: 2.5rem;
+        }
+        .audit-step {
+            background: rgba(255,255,255,0.1); border-radius: 12px;
+            padding: 1.5rem; width: 200px; text-align: center;
+        }
+        .audit-step .num {
+            background: var(--accent); color: white; width: 36px; height: 36px;
+            border-radius: 50%; display: inline-flex; align-items: center;
+            justify-content: center; font-weight: 700; margin-bottom: 0.8rem;
+        }
+        .audit-step h4 { font-size: 0.95rem; margin-bottom: 0.3rem; }
+        .audit-step p { font-size: 0.8rem; color: rgba(255,255,255,0.6); }
+
+        /* CONTACT */
+        .contact { background: var(--bg-alt); }
+        .contact-grid {
+            display: grid; grid-template-columns: 1fr 1fr; gap: 3rem;
+        }
+        .contact-info h3 { font-size: 1.3rem; font-weight: 700; margin-bottom: 1rem; }
+        .contact-info p { color: var(--text-light); margin-bottom: 1.5rem; }
+        .contact-detail {
+            display: flex; align-items: center; gap: 0.8rem;
+            margin-bottom: 1rem; font-size: 0.95rem;
+        }
+        .contact-detail .icon { font-size: 1.2rem; }
+
+        .contact-form input,
+        .contact-form textarea {
+            width: 100%; padding: 0.8rem 1rem; border: 1px solid var(--border);
+            border-radius: 8px; font-family: inherit; font-size: 0.95rem;
+            margin-bottom: 1rem; background: white;
+            transition: border-color 0.2s;
+        }
+        .contact-form input:focus,
+        .contact-form textarea:focus {
+            outline: none; border-color: var(--accent);
+        }
+        .contact-form textarea { min-height: 120px; resize: vertical; }
+        .contact-form button {
+            background: var(--accent); color: white; border: none;
+            padding: 1rem 2rem; border-radius: 8px; font-weight: 700;
+            font-size: 1rem; cursor: pointer; width: 100%;
+            transition: background 0.2s;
+        }
+        .contact-form button:hover { background: var(--accent-hover); }
+
+        /* FOOTER */
+        footer {
+            background: var(--primary); color: rgba(255,255,255,0.6);
+            padding: 2rem; text-align: center; font-size: 0.85rem;
+        }
+        footer a { color: rgba(255,255,255,0.8); text-decoration: none; }
+
+        /* IMAGES */
+        .hero-image {
+            margin-top: 2.5rem;
+        }
+        .hero-image img {
+            max-width: 500px; width: 100%; border-radius: 12px;
+        }
+        .section-header-with-img {
+            display: flex; align-items: center; gap: 2rem;
+            margin-bottom: 3rem;
+        }
+        .section-header-with-img .section-sub { margin-bottom: 0; }
+        .section-img {
+            width: 220px; min-width: 180px; border-radius: 12px;
+        }
+        .problem .section-img {
+            border: 1px solid rgba(255,255,255,0.15);
+        }
+
+        /* RESPONSIVE */
+        @media (max-width: 768px) {
+            .why-grid, .contact-grid { grid-template-columns: 1fr; }
+            .hero { padding: 7rem 1.5rem 3rem; }
+            section { padding: 3rem 1.5rem; }
+            .section-header-with-img { flex-direction: column; text-align: center; }
+            .section-img { width: 180px; }
+            .nav-actions { gap: 0.5rem; }
+            .nav-link span:not(.copied-toast) { display: inline; }
+        }
+    </style>
+</head>
+<body>
+
+<nav>
+    <a href="#" class="logo"><img src="img/logo.png" alt="BitMan" class="logo-img"></a>
+    <div class="nav-actions">
+        <a href="https://wa.me/41787482377" target="_blank" class="nav-link whatsapp" title="WhatsApp">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+            WhatsApp
+        </a>
+        <button onclick="copyEmail(this)" class="nav-link email-copy" title="E-Mail kopieren">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"/><path d="M5 15H4a2 2 0 01-2-2V4a2 2 0 012-2h9a2 2 0 012 2v1"/></svg>
+            jnowakowski@gmail.com
+            <span class="copied-toast">Kopiert!</span>
+        </button>
+        <a href="#kontakt" class="cta-nav">Erstgespräch vereinbaren</a>
+    </div>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+    <div class="hero-badge">IT-Support speziell für Gewerbe & Produktion</div>
+    <h1>Ihre IT läuft -damit Ihre Produktion nie stillsteht.</h1>
+    <p>15 Jahre Erfahrung in der Fertigungsindustrie. Ich verstehe nicht nur Ihre IT, sondern auch Ihren Betrieb. Von der Maus bis zum Netzwerk -alles aus einer Hand.</p>
+    <a href="#kontakt" class="hero-cta">Termin vereinbaren</a>
+    <p class="hero-sub">Unverbindlich. Persönlich vor Ort in der Region Bern.</p>
+    <div class="hero-image">
+        <img src="img/bitman-hero.png" alt="IT-Support für Produktion und Gewerbe" loading="lazy">
+    </div>
+</section>
+
+<!-- TRUST BAR -->
+<div class="trust-bar">
+    <p>Erfahrung aus führenden Unternehmen:</p>
+    <div class="trust-logos">
+        <span class="trust-item">Google</span>
+        <span class="trust-item">Roche</span>
+        <span class="trust-item">Hilti</span>
+        <span class="trust-item">UBS</span>
+        <span class="trust-item">Ericsson</span>
+    </div>
+</div>
+
+<!-- PROBLEM -->
+<section class="problem">
+    <div class="container">
+        <div class="section-header-with-img">
+            <div>
+                <h2 class="section-title">Kommt Ihnen das bekannt vor?</h2>
+                <p class="section-sub">Die typischen IT-Probleme in Gewerbe und Produktion:</p>
+            </div>
+            <img src="img/bitman-security.png" alt="IT-Sicherheit für Gewerbe" class="section-img" loading="lazy">
+        </div>
+        <div class="problem-grid">
+            <div class="problem-card">
+                <div class="icon">🖥️</div>
+                <h3>PC streikt, Arbeit steht still</h3>
+                <p>Windows friert ein, der Drucker funktioniert nicht, Programme sind langsam. Und niemand kümmert sich darum.</p>
+            </div>
+            <div class="problem-card">
+                <div class="icon">🔌</div>
+                <h3>Netzwerk ist ein Chaos</h3>
+                <p>Kein Plan, wer wo angeschlossen ist. WLAN fällt aus. Kein VPN. Und wenn etwas kaputt geht, weiss niemand warum.</p>
+            </div>
+            <div class="problem-card">
+                <div class="icon">💾</div>
+                <h3>Kein Backup, keine Sicherheit</h3>
+                <p>Wenn die Festplatte stirbt, sind Jahre an Daten weg. Keine Datensicherung, kein Plan für den Ernstfall.</p>
+            </div>
+            <div class="problem-card">
+                <div class="icon">🏭</div>
+                <h3>IT und Produktion reden nicht</h3>
+                <p>CNC-Rechner, Steuerungen und Büro-PCs -alles getrennt. Keiner versteht beides. Bis etwas schiefgeht.</p>
+            </div>
+            <div class="problem-card">
+                <div class="icon">📊</div>
+                <h3>Alles läuft über Excel und Papier</h3>
+                <p>Aufträge, Lager, Kunden -alles in Tabellen oder auf Zetteln. Fehleranfällig und zeitraubend.</p>
+            </div>
+            <div class="problem-card">
+                <div class="icon">🔒</div>
+                <h3>IT-Firma versteht uns nicht</h3>
+                <p>Die grosse IT-Firma redet nur über Cloud und Verträge. Was Sie brauchen, ist jemand, der Ihre Werkstatt versteht.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- SERVICES -->
+<section id="leistungen">
+    <div class="container">
+        <div class="section-header-with-img">
+            <div>
+                <h2 class="section-title">Was ich für Sie tue</h2>
+                <p class="section-sub">Alles, was Ihr Betrieb an IT braucht -von der Maus bis zur Strategie.</p>
+            </div>
+            <img src="img/bitman-cloud.png" alt="Cloud und IT-Infrastruktur" class="section-img" loading="lazy">
+        </div>
+        <div class="services-grid">
+            <div class="service-card">
+                <div class="icon">🔧</div>
+                <h3>IT-Support & Reparatur</h3>
+                <p>PC, Drucker, Scanner, Netzwerk -wenn etwas nicht funktioniert, komme ich vorbei und behebe das Problem. Schnell und unkompliziert.</p>
+            </div>
+            <div class="service-card">
+                <div class="icon">🌐</div>
+                <h3>Netzwerk & Infrastruktur</h3>
+                <p>Stabiles Firmennetzwerk, WLAN, VPN, Firewall. Ich plane, installiere und dokumentiere -damit alles sauber läuft.</p>
+            </div>
+            <div class="service-card">
+                <div class="icon">🛡️</div>
+                <h3>Datensicherung & Sicherheit</h3>
+                <p>Backup-Strategie, Virenschutz, Passwort-Management. Damit Ihre Daten sicher sind -auch wenn ein PC ausfällt.</p>
+            </div>
+            <div class="service-card">
+                <div class="icon">🏗️</div>
+                <h3>IT für Werkstatt & Produktion</h3>
+                <p>CNC-Anbindung, Produktionsrechner, Maschinensteuerung. Ich verbinde Ihre Produktions-IT mit dem Büro -weil ich beides verstehe.</p>
+            </div>
+            <div class="service-card">
+                <div class="icon">📦</div>
+                <h3>Hardware & Software</h3>
+                <p>Neue PCs, Bildschirme, Server? Ich berate, beschaffe und installiere -abgestimmt auf Ihren Betrieb und Ihr Budget.</p>
+            </div>
+            <div class="service-card">
+                <div class="icon">📋</div>
+                <h3>IT-Planung & Beratung</h3>
+                <p>Wo steht Ihre IT? Was brauchen Sie wirklich? Ich analysiere Ihren Betrieb und erstelle einen klaren, realistischen IT-Plan.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- WHY ME -->
+<section style="background: var(--bg-alt);">
+    <div class="container">
+        <h2 class="section-title">Warum BitMan?</h2>
+        <p class="section-sub">Was mich von einer klassischen IT-Firma unterscheidet.</p>
+        <div class="why-grid">
+            <div class="why-text">
+                <h3>Ich war selbst in der Produktion.</h3>
+                <p>12 Jahre lang war ich IT-Leiter in einem Produktionsbetrieb. Ich kenne den Alltag: Wenn der CNC-Rechner ausfällt, steht die Fertigung still. Wenn das ERP am Freitag abstürzt, ist die Montagslieferung gefährdet.</p>
+                <p>Danach habe ich bei Google, Roche und Hilti komplexe IT-Systeme gebaut. Dieses Wissen bringe ich jetzt zu Ihnen -ohne den Overhead einer grossen IT-Firma.</p>
+                <p><strong>Lean Management, Toyota Production System, Six Sigma</strong> -ich spreche die Sprache der Produktion und der IT.</p>
+            </div>
+            <div class="why-stats" style="position: relative;">
+                <img src="img/bitman-audit.png" alt="IT-Audit und Qualitätskontrolle" style="width: 100%; border-radius: 12px; margin-bottom: 1.5rem; grid-column: 1 / -1;" loading="lazy">
+                <div class="stat">
+                    <div class="stat-number">15+</div>
+                    <div class="stat-label">Jahre in Produktion & IT</div>
+                </div>
+                <div class="stat">
+                    <div class="stat-number">30</div>
+                    <div class="stat-label">Jahre IT-Erfahrung total</div>
+                </div>
+                <div class="stat">
+                    <div class="stat-number">MBA</div>
+                    <div class="stat-label">Business & Management</div>
+                </div>
+                <div class="stat">
+                    <div class="stat-number">Bern</div>
+                    <div class="stat-label">Vor Ort, persönlich</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- FREE AUDIT CTA -->
+<section class="audit" id="audit">
+    <div class="container">
+        <h2>IT-Standortbestimmung für Ihren Betrieb</h2>
+        <p>Ich komme zu Ihnen, schaue mir Ihre IT-Infrastruktur an und sage Ihnen ehrlich, was gut läuft und was verbessert werden kann. Unverbindlich, ohne Vertragsbindung.</p>
+        <div class="audit-steps">
+            <div class="audit-step">
+                <div class="num">1</div>
+                <h4>Termin vereinbaren</h4>
+                <p>Per Telefon oder E-Mail</p>
+            </div>
+            <div class="audit-step">
+                <div class="num">2</div>
+                <h4>Besuch vor Ort</h4>
+                <p>Ich schaue mir alles an</p>
+            </div>
+            <div class="audit-step">
+                <div class="num">3</div>
+                <h4>Klarer Bericht</h4>
+                <p>Was ist gut, was nicht</p>
+            </div>
+        </div>
+        <a href="#kontakt" class="hero-cta">Jetzt Termin vereinbaren</a>
+    </div>
+</section>
+
+<!-- CONTACT -->
+<section class="contact" id="kontakt">
+    <div class="container">
+        <h2 class="section-title">Kontakt</h2>
+        <p class="section-sub">Melden Sie sich -ich antworte noch am gleichen Tag.</p>
+        <div class="contact-grid">
+            <div class="contact-info">
+                <h3>Janusz Nowakowski</h3>
+                <p>BitMan -IT-Support für Gewerbe und Produktion in der Region Bern.</p>
+                <div class="contact-detail">
+                    <span class="icon">📧</span>
+                    <span style="color: var(--accent); cursor: pointer; user-select: all;" onclick="navigator.clipboard.writeText('jnowakowski@gmail.com'); this.dataset.orig=this.textContent; this.textContent='Kopiert!'; setTimeout(()=>this.textContent=this.dataset.orig, 1500)">jnowakowski@gmail.com</span>
+                </div>
+                <div class="contact-detail">
+                    <span class="icon">📱</span>
+                    <span>+41 78 748 23 77</span>
+                </div>
+                <div class="contact-detail">
+                    <span class="icon" style="color: #25D366; font-size: 1.3rem;">💬</span>
+                    <a href="https://wa.me/41787482377" target="_blank" style="color: #25D366; font-weight: 600; text-decoration: none;">WhatsApp schreiben</a>
+                </div>
+                <div class="contact-detail">
+                    <span class="icon">📍</span>
+                    <span>Region Bern -Vor-Ort-Service</span>
+                </div>
+                <div style="margin-top: 2rem; padding: 1.5rem; background: white; border-radius: 12px; border: 1px solid var(--border);">
+                    <p style="font-weight: 700; margin-bottom: 0.5rem;">CloudIndustry GmbH</p>
+                    <p style="font-size: 0.85rem; color: var(--text-light);">IT Engineering & Consulting seit 2004</p>
+                </div>
+            </div>
+            <form class="contact-form" action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
+                <input type="text" name="firma" placeholder="Firma" required>
+                <input type="text" name="name" placeholder="Ihr Name" required>
+                <input type="email" name="email" placeholder="E-Mail" required>
+                <input type="tel" name="telefon" placeholder="Telefon (optional)">
+                <textarea name="nachricht" placeholder="Wie kann ich Ihnen helfen? (optional)"></textarea>
+                <button type="submit">Unverbindlich anfragen</button>
+            </form>
+        </div>
+    </div>
+</section>
+
+<footer>
+    <p>&copy; 2026 BitMan -IT-Support für Gewerbe und Produktion | <a href="mailto:jnowakowski@gmail.com">jnowakowski@gmail.com</a></p>
+    <p style="margin-top: 0.5rem;">Ein Service von CloudIndustry GmbH | Bern, Schweiz</p>
+</footer>
+
+<script>
+function copyEmail(btn) {
+    navigator.clipboard.writeText('jnowakowski@gmail.com').then(function() {
+        var toast = btn.querySelector('.copied-toast');
+        toast.classList.add('show');
+        setTimeout(function() { toast.classList.remove('show'); }, 1500);
+    });
+}
+</script>
+</body>
+</html>
