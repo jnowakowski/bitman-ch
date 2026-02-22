@@ -3,9 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>BitMan – IT-Support für KMU &amp; Werkstatt in Bern | Persönlich, vor Ort</title>
-    <meta name="description" content="BitMan – Werkstatt-IT und KMU-Infrastruktur in Bern. Drei Jahrzehnte Erfahrung in Fertigung und IT. Persönlich, vor Ort, kein Vertrag. Jetzt anrufen.">
-    <meta name="keywords" content="IT Support Bern, Werkstatt IT, KMU Infrastruktur, CNC IT Support, IT Outsourcing KMU, IT Gewerbe, IT Produktion, Netzwerk Bern">
+    <title>BitMan – IT für Produktion &amp; Gewerbe | Berner Oberland, Jura, Wallis</title>
+    <meta name="description" content="BitMan – IT-Infrastruktur für KMU in Produktion, Lager und Werkstatt. 25+ Jahre Erfahrung. Persönlich, vor Ort, ein Ansprechpartner. Berner Oberland, Jura, Wallis.">
+    <meta name="keywords" content="IT Support Produktion, KMU IT Schweiz, IT Gewerbe Berner Oberland, IT Wallis, IT Jura, Werkstatt IT, CNC IT, Lean Manufacturing IT, IT Infrastruktur KMU">
     <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-5SFLV35LLW"></script>
     <script>
@@ -20,342 +20,409 @@
         *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
 
         :root {
-            --primary: #1a1a2e;
-            --accent: #e94560;
-            --accent-hover: #d63851;
-            --text: #2d2d2d;
-            --text-light: #6b7280;
-            --bg: #ffffff;
-            --bg-alt: #f8f9fa;
-            --border: #e5e7eb;
+            --red: #E2001A;
+            --red-hover: #C4001A;
+            --red-light: #FFF0F1;
+            --dark: #1A1A1A;
+            --text: #333333;
+            --text-light: #666666;
+            --bg: #FFFFFF;
+            --bg-warm: #FAFAFA;
+            --border: #E8E8E8;
         }
 
         body {
             font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
             color: var(--text);
-            line-height: 1.6;
+            line-height: 1.65;
             -webkit-font-smoothing: antialiased;
+            background: var(--bg);
         }
 
         /* NAV */
         nav {
             position: fixed; top: 0; width: 100%; z-index: 100;
-            background: rgba(255,255,255,0.95); backdrop-filter: blur(10px);
+            background: rgba(255,255,255,0.97); backdrop-filter: blur(12px);
             border-bottom: 1px solid var(--border);
-            padding: 1rem 2rem;
+            padding: 0.8rem 2rem;
             display: flex; justify-content: space-between; align-items: center;
         }
-        .logo { display: flex; align-items: center; text-decoration: none; }
-        .logo-img { height: 40px; width: auto; }
-        .nav-actions {
-            display: flex; align-items: center; gap: 1rem;
-        }
+        .logo { display: flex; align-items: center; text-decoration: none; gap: 0.6rem; }
+        .logo-img { height: 36px; width: auto; }
+        .logo-text { font-weight: 800; font-size: 1.1rem; color: var(--dark); letter-spacing: -0.02em; }
+        .nav-actions { display: flex; align-items: center; gap: 0.8rem; }
         .nav-link {
-            display: flex; align-items: center; gap: 0.4rem;
-            color: var(--text); text-decoration: none; font-size: 0.85rem;
-            font-weight: 500; padding: 0.4rem 0.7rem; border-radius: 6px;
+            display: flex; align-items: center; gap: 0.35rem;
+            color: var(--text); text-decoration: none; font-size: 0.82rem;
+            font-weight: 500; padding: 0.4rem 0.6rem; border-radius: 6px;
             transition: background 0.2s; cursor: pointer; border: none; background: none;
             font-family: inherit;
         }
-        .nav-link:hover { background: var(--bg-alt); }
-        .nav-link svg { width: 18px; height: 18px; }
+        .nav-link:hover { background: var(--bg-warm); }
+        .nav-link svg { width: 16px; height: 16px; }
         .nav-link.whatsapp { color: #25D366; }
-        .nav-link.email-copy { position: relative; }
-        .nav-link .copied-toast {
-            position: absolute; top: 100%; left: 50%; transform: translateX(-50%);
-            background: var(--primary); color: white; font-size: 0.75rem;
-            padding: 0.3rem 0.6rem; border-radius: 4px; white-space: nowrap;
-            opacity: 0; transition: opacity 0.2s; pointer-events: none;
-        }
-        .nav-link .copied-toast.show { opacity: 1; }
         nav a.cta-nav {
-            background: var(--accent); color: white; padding: 0.6rem 1.5rem;
-            border-radius: 6px; text-decoration: none; font-weight: 600; font-size: 0.9rem;
+            background: var(--red); color: white; padding: 0.5rem 1.2rem;
+            border-radius: 6px; text-decoration: none; font-weight: 600; font-size: 0.85rem;
             transition: background 0.2s;
         }
-        nav a.cta-nav:hover { background: var(--accent-hover); }
+        nav a.cta-nav:hover { background: var(--red-hover); }
 
         /* HERO */
         .hero {
-            padding: 8rem 2rem 4rem;
-            max-width: 900px; margin: 0 auto;
-            text-align: center;
+            padding: 7rem 2rem 3.5rem;
+            max-width: 860px; margin: 0 auto;
         }
-        .hero-badge {
-            display: inline-block; background: #fef2f2; color: var(--accent);
-            padding: 0.4rem 1rem; border-radius: 50px; font-size: 0.85rem;
+        .hero-region {
+            display: inline-flex; align-items: center; gap: 0.4rem;
+            background: var(--red-light); color: var(--red);
+            padding: 0.35rem 0.9rem; border-radius: 50px; font-size: 0.8rem;
             font-weight: 600; margin-bottom: 1.5rem;
         }
         .hero h1 {
-            font-size: clamp(2rem, 5vw, 3.2rem);
-            font-weight: 800; line-height: 1.15;
-            color: var(--primary); margin-bottom: 1.5rem;
+            font-size: clamp(1.9rem, 4.5vw, 2.8rem);
+            font-weight: 800; line-height: 1.18;
+            color: var(--dark); margin-bottom: 1.2rem;
+            letter-spacing: -0.02em;
         }
-        .hero p {
-            font-size: 1.15rem; color: var(--text-light);
-            max-width: 640px; margin: 0 auto 2rem;
+        .hero h1 em {
+            font-style: normal; color: var(--red);
         }
-        .hero-cta {
-            display: inline-block; background: var(--accent); color: white;
-            padding: 1rem 2.5rem; border-radius: 8px; text-decoration: none;
-            font-weight: 700; font-size: 1.1rem; transition: all 0.2s;
-            box-shadow: 0 4px 14px rgba(233,69,96,0.3);
+        .hero-lead {
+            font-size: 1.1rem; color: var(--text-light);
+            max-width: 620px; margin-bottom: 2rem;
+            line-height: 1.7;
         }
-        .hero-cta:hover { background: var(--accent-hover); transform: translateY(-1px); }
-        .hero-sub {
-            margin-top: 0.8rem; font-size: 0.85rem; color: var(--text-light);
+        .hero-ctas {
+            display: flex; gap: 0.8rem; flex-wrap: wrap;
+            margin-bottom: 0.8rem;
+        }
+        .btn-primary {
+            display: inline-flex; align-items: center; gap: 0.4rem;
+            background: var(--red); color: white;
+            padding: 0.85rem 1.8rem; border-radius: 8px; text-decoration: none;
+            font-weight: 700; font-size: 1rem; transition: all 0.2s;
+        }
+        .btn-primary:hover { background: var(--red-hover); }
+        .btn-secondary {
+            display: inline-flex; align-items: center; gap: 0.4rem;
+            background: var(--dark); color: white;
+            padding: 0.85rem 1.8rem; border-radius: 8px; text-decoration: none;
+            font-weight: 600; font-size: 1rem; transition: all 0.2s;
+        }
+        .btn-secondary:hover { background: #333; }
+        .hero-note {
+            font-size: 0.82rem; color: var(--text-light);
         }
 
-        /* TRUST BAR */
-        .trust-bar {
-            background: var(--bg-alt); padding: 2rem;
-            text-align: center; border-top: 1px solid var(--border);
-            border-bottom: 1px solid var(--border);
+        /* RED DIVIDER */
+        .red-line {
+            height: 3px; background: var(--red); width: 100%;
         }
-        .trust-bar p { font-size: 0.9rem; color: var(--text-light); }
-        .trust-logos {
-            display: flex; justify-content: center; gap: 2.5rem;
-            flex-wrap: wrap; margin-top: 1rem;
+
+        /* INTRO SECTION */
+        .intro {
+            padding: 4rem 2rem;
+            background: var(--bg-warm);
         }
-        .trust-item {
-            font-weight: 700; color: var(--primary); font-size: 0.95rem;
-            opacity: 0.6;
+        .intro-inner {
+            max-width: 780px; margin: 0 auto;
         }
+        .intro-inner p {
+            font-size: 1.05rem; color: var(--text);
+            line-height: 1.8; margin-bottom: 1.2rem;
+        }
+        .intro-inner p:last-child { margin-bottom: 0; }
+        .intro-inner strong { color: var(--dark); }
 
         /* SECTIONS */
-        section { padding: 5rem 2rem; }
-        .container { max-width: 1000px; margin: 0 auto; }
+        section { padding: 4.5rem 2rem; }
+        .container { max-width: 920px; margin: 0 auto; }
+        .section-label {
+            display: inline-block; font-size: 0.75rem; font-weight: 700;
+            text-transform: uppercase; letter-spacing: 0.08em;
+            color: var(--red); margin-bottom: 0.6rem;
+        }
         .section-title {
-            font-size: 1.8rem; font-weight: 800; color: var(--primary);
-            margin-bottom: 0.5rem;
+            font-size: 1.7rem; font-weight: 800; color: var(--dark);
+            margin-bottom: 0.4rem; letter-spacing: -0.01em;
         }
         .section-sub {
-            color: var(--text-light); font-size: 1.05rem;
-            margin-bottom: 3rem;
+            color: var(--text-light); font-size: 1rem;
+            margin-bottom: 2.5rem;
         }
 
-        /* PROBLEM SECTION */
-        .problem { background: var(--primary); color: white; }
-        .problem .section-title { color: white; }
-        .problem .section-sub { color: rgba(255,255,255,0.7); }
+        /* PROBLEM CARDS */
+        .problems { background: var(--dark); color: white; }
+        .problems .section-label { color: rgba(226,0,26,0.9); }
+        .problems .section-title { color: white; }
+        .problems .section-sub { color: rgba(255,255,255,0.6); }
         .problem-grid {
-            display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 1.5rem;
+            display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+            gap: 1.2rem;
         }
         .problem-card {
-            background: rgba(255,255,255,0.08); border: 1px solid rgba(255,255,255,0.1);
-            border-radius: 12px; padding: 1.5rem;
+            background: rgba(255,255,255,0.06); border: 1px solid rgba(255,255,255,0.08);
+            border-radius: 10px; padding: 1.4rem;
         }
-        .problem-card .icon { font-size: 1.8rem; margin-bottom: 0.8rem; }
-        .problem-card h3 { font-size: 1.05rem; margin-bottom: 0.5rem; }
-        .problem-card p { font-size: 0.9rem; color: rgba(255,255,255,0.7); line-height: 1.5; }
+        .problem-card h3 {
+            font-size: 0.95rem; font-weight: 700; margin-bottom: 0.4rem;
+        }
+        .problem-card p {
+            font-size: 0.85rem; color: rgba(255,255,255,0.6); line-height: 1.55;
+        }
+        .problem-card .card-icon {
+            width: 32px; height: 32px; background: var(--red);
+            border-radius: 8px; display: flex; align-items: center;
+            justify-content: center; margin-bottom: 0.8rem;
+            font-size: 1rem;
+        }
 
         /* SERVICES */
         .services-grid {
-            display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 1.5rem;
+            display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+            gap: 1.2rem;
         }
         .service-card {
-            border: 1px solid var(--border); border-radius: 12px;
-            padding: 2rem; transition: all 0.2s;
+            border: 1px solid var(--border); border-radius: 10px;
+            padding: 1.6rem; transition: border-color 0.2s;
         }
-        .service-card:hover {
-            border-color: var(--accent); box-shadow: 0 4px 20px rgba(233,69,96,0.1);
+        .service-card:hover { border-color: var(--red); }
+        .service-card h3 {
+            font-size: 0.95rem; font-weight: 700; margin-bottom: 0.4rem;
+            color: var(--dark);
         }
-        .service-card .icon { font-size: 2rem; margin-bottom: 1rem; }
-        .service-card h3 { font-size: 1.1rem; font-weight: 700; margin-bottom: 0.5rem; }
-        .service-card p { font-size: 0.9rem; color: var(--text-light); }
+        .service-card p { font-size: 0.85rem; color: var(--text-light); line-height: 1.55; }
+        .service-card .card-icon {
+            width: 32px; height: 32px; background: var(--red-light);
+            border-radius: 8px; display: flex; align-items: center;
+            justify-content: center; margin-bottom: 0.8rem;
+            font-size: 1rem; color: var(--red);
+        }
 
-        /* WHY ME */
-        .why-grid {
+        /* DIFFERENTIATOR */
+        .diff {
+            background: var(--bg-warm);
+            border-top: 1px solid var(--border);
+            border-bottom: 1px solid var(--border);
+        }
+        .diff-grid {
             display: grid; grid-template-columns: 1fr 1fr; gap: 3rem;
-            align-items: center;
+            align-items: start;
         }
-        .why-text h3 { font-size: 1.3rem; font-weight: 700; margin-bottom: 1rem; }
-        .why-text p { color: var(--text-light); margin-bottom: 1rem; }
-        .why-stats {
-            display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem;
+        .diff-point {
+            margin-bottom: 1.8rem;
         }
-        .stat { text-align: center; }
-        .stat-number { font-size: 2.5rem; font-weight: 800; color: var(--accent); }
-        .stat-label { font-size: 0.85rem; color: var(--text-light); }
+        .diff-point:last-child { margin-bottom: 0; }
+        .diff-point h3 {
+            font-size: 1rem; font-weight: 700; color: var(--dark);
+            margin-bottom: 0.3rem;
+            display: flex; align-items: center; gap: 0.5rem;
+        }
+        .diff-point h3::before {
+            content: ''; width: 6px; height: 6px;
+            background: var(--red); border-radius: 50%;
+            flex-shrink: 0;
+        }
+        .diff-point p { font-size: 0.9rem; color: var(--text-light); padding-left: 1.1rem; }
+        .diff-stats {
+            display: grid; grid-template-columns: 1fr 1fr; gap: 1.2rem;
+        }
+        .stat-box {
+            background: white; border: 1px solid var(--border);
+            border-radius: 10px; padding: 1.3rem; text-align: center;
+        }
+        .stat-box .num {
+            font-size: 2rem; font-weight: 800; color: var(--red);
+            line-height: 1;
+        }
+        .stat-box .label {
+            font-size: 0.78rem; color: var(--text-light); margin-top: 0.3rem;
+        }
 
-        /* AUDIT CTA */
-        .audit {
-            background: linear-gradient(135deg, var(--primary) 0%, #16213e 100%);
-            color: white; text-align: center;
+        /* APPROACH */
+        .approach-steps {
+            display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.5rem;
         }
-        .audit h2 { font-size: 2rem; font-weight: 800; margin-bottom: 1rem; }
-        .audit p { color: rgba(255,255,255,0.8); max-width: 600px; margin: 0 auto 2rem; font-size: 1.05rem; }
-        .audit-steps {
-            display: flex; justify-content: center; gap: 2rem;
-            flex-wrap: wrap; margin-bottom: 2.5rem;
+        .step {
+            text-align: center; padding: 1.5rem;
         }
-        .audit-step {
-            background: rgba(255,255,255,0.1); border-radius: 12px;
-            padding: 1.5rem; width: 200px; text-align: center;
+        .step-num {
+            width: 40px; height: 40px; background: var(--red);
+            color: white; border-radius: 50%; display: inline-flex;
+            align-items: center; justify-content: center;
+            font-weight: 800; font-size: 1.1rem; margin-bottom: 1rem;
         }
-        .audit-step .num {
-            background: var(--accent); color: white; width: 36px; height: 36px;
-            border-radius: 50%; display: inline-flex; align-items: center;
-            justify-content: center; font-weight: 700; margin-bottom: 0.8rem;
+        .step h3 { font-size: 0.95rem; font-weight: 700; margin-bottom: 0.3rem; }
+        .step p { font-size: 0.85rem; color: var(--text-light); }
+
+        /* CTA BAND */
+        .cta-band {
+            background: var(--red); color: white;
+            padding: 3rem 2rem; text-align: center;
         }
-        .audit-step h4 { font-size: 0.95rem; margin-bottom: 0.3rem; }
-        .audit-step p { font-size: 0.8rem; color: rgba(255,255,255,0.6); }
+        .cta-band h2 {
+            font-size: 1.6rem; font-weight: 800; margin-bottom: 0.6rem;
+        }
+        .cta-band p {
+            font-size: 1rem; opacity: 0.9; max-width: 560px;
+            margin: 0 auto 1.5rem;
+        }
+        .cta-band .btn-white {
+            display: inline-flex; align-items: center; gap: 0.4rem;
+            background: white; color: var(--red);
+            padding: 0.85rem 2rem; border-radius: 8px; text-decoration: none;
+            font-weight: 700; font-size: 1rem; transition: all 0.2s;
+        }
+        .cta-band .btn-white:hover { background: #f5f5f5; }
 
         /* CONTACT */
-        .contact { background: var(--bg-alt); }
+        .contact { background: var(--bg-warm); }
         .contact-grid {
             display: grid; grid-template-columns: 1fr 1fr; gap: 3rem;
         }
-        .contact-info h3 { font-size: 1.3rem; font-weight: 700; margin-bottom: 1rem; }
-        .contact-info p { color: var(--text-light); margin-bottom: 1.5rem; }
-        .contact-detail {
-            display: flex; align-items: center; gap: 0.8rem;
-            margin-bottom: 1rem; font-size: 0.95rem;
+        .contact-info h3 {
+            font-size: 1.2rem; font-weight: 700; margin-bottom: 0.8rem;
+            color: var(--dark);
         }
-        .contact-detail .icon { font-size: 1.2rem; }
-
+        .contact-info p { color: var(--text-light); margin-bottom: 1.2rem; }
+        .contact-detail {
+            display: flex; align-items: center; gap: 0.7rem;
+            margin-bottom: 0.8rem; font-size: 0.92rem;
+        }
+        .contact-detail .icon {
+            width: 28px; height: 28px; background: var(--red-light);
+            border-radius: 6px; display: flex; align-items: center;
+            justify-content: center; font-size: 0.85rem; flex-shrink: 0;
+        }
         .contact-form input,
         .contact-form textarea {
-            width: 100%; padding: 0.8rem 1rem; border: 1px solid var(--border);
-            border-radius: 8px; font-family: inherit; font-size: 0.95rem;
-            margin-bottom: 1rem; background: white;
+            width: 100%; padding: 0.75rem 1rem; border: 1px solid var(--border);
+            border-radius: 8px; font-family: inherit; font-size: 0.9rem;
+            margin-bottom: 0.8rem; background: white;
             transition: border-color 0.2s;
         }
         .contact-form input:focus,
         .contact-form textarea:focus {
-            outline: none; border-color: var(--accent);
+            outline: none; border-color: var(--red);
         }
-        .contact-form textarea { min-height: 120px; resize: vertical; }
+        .contact-form textarea { min-height: 100px; resize: vertical; }
         .contact-form button {
-            background: var(--accent); color: white; border: none;
-            padding: 1rem 2rem; border-radius: 8px; font-weight: 700;
-            font-size: 1rem; cursor: pointer; width: 100%;
+            background: var(--red); color: white; border: none;
+            padding: 0.85rem 2rem; border-radius: 8px; font-weight: 700;
+            font-size: 0.95rem; cursor: pointer; width: 100%;
             transition: background 0.2s;
         }
-        .contact-form button:hover { background: var(--accent-hover); }
+        .contact-form button:hover { background: var(--red-hover); }
 
         /* FOOTER */
         footer {
-            background: var(--primary); color: rgba(255,255,255,0.6);
-            padding: 2rem; text-align: center; font-size: 0.85rem;
+            background: var(--dark); color: rgba(255,255,255,0.5);
+            padding: 2rem; font-size: 0.8rem;
         }
-        footer a { color: rgba(255,255,255,0.8); text-decoration: none; }
-
-        /* IMAGES */
-        .hero-image {
-            margin-top: 2.5rem;
-        }
-        .hero-image img {
-            max-width: 500px; width: 100%; border-radius: 12px;
-        }
-        .section-header-with-img {
-            display: flex; align-items: center; gap: 2rem;
-            margin-bottom: 3rem;
-        }
-        .section-header-with-img .section-sub { margin-bottom: 0; }
-        .section-img {
-            width: 220px; min-width: 180px; border-radius: 12px;
-        }
-        .problem .section-img {
-            border: 1px solid rgba(255,255,255,0.15);
+        footer a { color: rgba(255,255,255,0.7); text-decoration: none; }
+        footer a:hover { color: white; }
+        .footer-inner {
+            max-width: 920px; margin: 0 auto;
         }
 
         /* RESPONSIVE */
         @media (max-width: 768px) {
-            .why-grid, .contact-grid { grid-template-columns: 1fr; }
-            .hero { padding: 7rem 1.5rem 3rem; }
+            .hero { padding: 5.5rem 1.5rem 2.5rem; }
             section { padding: 3rem 1.5rem; }
-            .section-header-with-img { flex-direction: column; text-align: center; }
-            .section-img { width: 180px; }
-            .nav-actions { gap: 0.5rem; }
-            .nav-link span:not(.copied-toast) { display: inline; }
+            .diff-grid { grid-template-columns: 1fr; }
+            .contact-grid { grid-template-columns: 1fr; }
+            .approach-steps { grid-template-columns: 1fr; }
+            .nav-actions { gap: 0.3rem; }
+            .nav-link.phone-link { display: none; }
+            .hero-region { font-size: 0.72rem; }
         }
     </style>
 </head>
 <body>
 
 <nav>
-    <a href="#" class="logo"><img src="img/logo.png" alt="BitMan" class="logo-img"></a>
+    <a href="#" class="logo">
+        <img src="img/logo.png" alt="BitMan" class="logo-img">
+    </a>
     <div class="nav-actions">
-        <a href="tel:+41787482377" class="nav-link" title="Anrufen">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="width:18px;height:18px"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>
-            +41 78 748 23 77
+        <a href="tel:+41787482377" class="nav-link phone-link" title="Anrufen">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>
+            <span>078 748 23 77</span>
         </a>
         <a href="https://wa.me/41787482377" target="_blank" class="nav-link whatsapp" title="WhatsApp">
-            <svg viewBox="0 0 24 24" fill="currentColor" style="width:18px;height:18px"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
-            WhatsApp
+            <svg viewBox="0 0 24 24" fill="currentColor" style="width:16px;height:16px"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+            <span>WhatsApp</span>
         </a>
-        <a href="#kontakt" class="cta-nav">Termin vereinbaren</a>
+        <a href="#kontakt" class="cta-nav">Kontakt</a>
     </div>
 </nav>
 
 <!-- HERO -->
 <section class="hero">
-    <div class="hero-badge">Keine Verträge – 100 % Vertrauen</div>
-    <h1>Ich verstehe die Welt der Produktion von innen: und setze IT ein, die der Maschine und dem Menschen dient.</h1>
-    <p>Drei Jahrzehnte Erfahrung in Fertigung und IT. Heute bin ich Ihr persönlicher IT-Partner im Raum Bern. Ein Anruf genügt: ich kümmere mich.</p>
-    <div style="display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap; margin-bottom: 0.5rem;">
-        <a href="tel:+41787482377" class="hero-cta" style="background: var(--primary);">Jetzt anrufen: 078 748 23 77</a>
-        <a href="#kontakt" class="hero-cta">Ich komme vorbei</a>
+    <div class="hero-region">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="width:14px;height:14px"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+        Berner Oberland · Jura · Wallis
     </div>
-    <p class="hero-sub">Unverbindlich. Persönlich vor Ort in der Region Bern.</p>
-    <div class="hero-image">
-        <img src="img/bitman-hero.png" alt="IT-Support für Produktion und Gewerbe" loading="lazy">
+    <h1>Ihre Produktion steht still, weil die IT nicht funktioniert?<br><em>Ich komme vorbei und löse das.</em></h1>
+    <p class="hero-lead">Ein Ansprechpartner für alles: vom Arbeitsplatz über die CNC-Maschine bis zum Server. 25 Jahre Erfahrung in Fertigung und IT. Ich verstehe Ihren Betrieb, weil ich selbst 12 Jahre lang einer war.</p>
+    <div class="hero-ctas">
+        <a href="tel:+41787482377" class="btn-primary">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="width:18px;height:18px"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>
+            Jetzt anrufen
+        </a>
+        <a href="#kontakt" class="btn-secondary">Termin vereinbaren</a>
+    </div>
+    <p class="hero-note">Unverbindlich. Kein Vertrag. Persönlich vor Ort.</p>
+</section>
+
+<div class="red-line"></div>
+
+<!-- INTRO -->
+<section class="intro">
+    <div class="intro-inner">
+        <p>Ich bin Janusz Nowakowski. <strong>12 Jahre lang war ich IT-Leiter in einem Produktionsbetrieb</strong> – mit CNC-Fräsen, Lagerverwaltung, ERP und allem, was dazugehört. Wenn die Maschine stand, stand die Lieferung. Ich weiss, was das heisst.</p>
+        <p>Danach habe ich IT-Systeme bei <strong>Google, Roche, Hilti und der Bank für Internationalen Zahlungsausgleich</strong> gebaut. Heute bringe ich dieses Wissen direkt zu Ihnen – persönlich, vor Ort, ohne Umwege.</p>
+        <p>Ich bin <strong>eine Person, kein Callcenter</strong>. Wenn Sie anrufen, nehme ich ab. Wenn es brennt, bin ich da. Und ich sage Ihnen ehrlich, was Sie brauchen – und was nicht.</p>
     </div>
 </section>
 
-<!-- TRUST BAR -->
-    <div class="trust-bar">
-    <p>Vertraut von Gewerbebetrieben in der Region Bern</p>
-    <div class="trust-logos">
-        <span class="trust-item">Paranor</span>
-        <span class="trust-item">Drei Jahrzehnte Erfahrung</span>
-        <span class="trust-item">Persönlich &amp; vor Ort</span>
-    </div>
-</div>
-
-<!-- PROBLEM -->
-<section class="problem">
+<!-- PROBLEMS -->
+<section class="problems">
     <div class="container">
-        <div class="section-header-with-img">
-            <div>
-                <h2 class="section-title">Kommt Ihnen das bekannt vor?</h2>
-                <p class="section-sub">Die häufigsten IT-Probleme in Schweizer KMU: und was ich dagegen tue.</p>
-            </div>
-            <img src="img/bitman-security.png" alt="IT-Sicherheit für Gewerbe" class="section-img" loading="lazy">
-        </div>
+        <span class="section-label">Das kenne ich</span>
+        <h2 class="section-title">Typische Situationen in KMU</h2>
+        <p class="section-sub">Diese Probleme sehe ich jede Woche. Und ich löse sie.</p>
         <div class="problem-grid">
             <div class="problem-card">
-                <div class="icon">🖥️</div>
-                <h3>PC streikt, Arbeit steht still</h3>
-                <p>Wenn es steht, komme ich vorbei: am gleichen Tag, vor Ort. Ich bringe Ihre Arbeitsplätze wieder zum Laufen.</p>
+                <div class="card-icon">🏭</div>
+                <h3>Produktionsrechner fällt aus</h3>
+                <p>CNC steht, Fräse läuft nicht, CAD-Station hängt. Ich kenne diese Maschinen. Am gleichen Tag vor Ort.</p>
             </div>
             <div class="problem-card">
-                <div class="icon">🔌</div>
-                <h3>Netzwerk ist ein Chaos</h3>
-                <p>Ich bringe Ordnung in Ihr Netzwerk und dokumentiere alles sauber: damit beim nächsten Mal jeder weiss, was wo läuft.</p>
+                <div class="card-icon">🔌</div>
+                <h3>Netzwerk ist gewachsen, niemand blickt durch</h3>
+                <p>Switch hier, Kabel dort, ein alter Router im Lager. Ich bringe Ordnung und dokumentiere alles sauber.</p>
             </div>
             <div class="problem-card">
-                <div class="icon">💾</div>
-                <h3>Kein Backup, kein Plan</h3>
-                <p>Ich richte eine zuverlässige Datensicherung ein und teste die Wiederherstellung: damit Ihre Daten wirklich geschützt sind.</p>
+                <div class="card-icon">💾</div>
+                <h3>Kein Backup – oder eines, das niemand getestet hat</h3>
+                <p>Ich richte eine Sicherung ein, die funktioniert. Und teste die Wiederherstellung, damit Sie ruhig schlafen.</p>
             </div>
             <div class="problem-card">
-                <div class="icon">🏭</div>
-                <h3>Werkstatt und Büro reden nicht</h3>
-                <p>Ich verbinde Produktions-IT und Büro, weil ich selbst aus der Fertigung komme. CNC, MES und ERP unter einem Dach.</p>
+                <div class="card-icon">🔒</div>
+                <h3>Angst vor Ransomware</h3>
+                <p>Einfache Massnahmen, die sofort wirken. Kein Fachchinesisch, keine Panikmache – praktischer Schutz.</p>
             </div>
             <div class="problem-card">
-                <div class="icon">🔒</div>
-                <h3>IT-Sicherheit? Irgendwann…</h3>
-                <p>Einfache Massnahmen heute verhindern teuren Schaden morgen. Ich zeige Ihnen, wo Sie anfangen: ohne Fachchinesisch.</p>
+                <div class="card-icon">📦</div>
+                <h3>Neuen Server, neue PCs – aber welche?</h3>
+                <p>Ich berate, was zu Ihrem Betrieb passt. Unabhängig – ich verkaufe keine Hardware, ich empfehle die richtige.</p>
             </div>
             <div class="problem-card">
-                <div class="icon">🤷</div>
-                <h3>IT-Firma versteht uns nicht</h3>
-                <p>Ich war selbst in der Produktion. Ich spreche Ihre Sprache, nicht IT-Jargon: und bin in 20 Minuten bei Ihnen.</p>
+                <div class="card-icon">🤝</div>
+                <h3>IT-Firma versteht die Werkstatt nicht</h3>
+                <p>Ich war selbst in der Produktion. Ich weiss, dass um 6 Uhr Schichtbeginn ist und Ihre Maschinen dann laufen müssen.</p>
             </div>
         </div>
     </div>
@@ -364,139 +431,156 @@
 <!-- SERVICES -->
 <section id="leistungen">
     <div class="container">
-        <div class="section-header-with-img">
-            <div>
-                <h2 class="section-title">Was ich für Sie tue</h2>
-                <p class="section-sub">Ein Ansprechpartner, keine Hotlines.</p>
-            </div>
-            <img src="img/bitman-cloud.png" alt="Cloud und IT-Infrastruktur" class="section-img" loading="lazy">
-        </div>
+        <span class="section-label">Leistungen</span>
+        <h2 class="section-title">Was ich für Sie tue</h2>
+        <p class="section-sub">Alles aus einer Hand – von der Maus bis zur Cloud.</p>
         <div class="services-grid">
             <div class="service-card">
-                <div class="icon">🔧</div>
-                <h3>IT-Support & Reparatur</h3>
-                <p>PC, Drucker, Scanner, Netzwerk – wenn etwas nicht funktioniert, bin ich in 20 Minuten bei Ihnen und behebe das Problem vor Ort.</p>
+                <div class="card-icon">🔧</div>
+                <h3>IT-Support vor Ort</h3>
+                <p>PC, Drucker, Netzwerk – wenn etwas nicht läuft, komme ich vorbei und löse es. Am gleichen Tag.</p>
             </div>
             <div class="service-card">
-                <div class="icon">🌐</div>
-                <h3>Netzwerk & Infrastruktur</h3>
-                <p>Stabiles Firmennetzwerk, das Büro und Werkstatt verbindet. WLAN, VPN, Firewall – ich plane, installiere und dokumentiere alles sauber.</p>
+                <div class="card-icon">🌐</div>
+                <h3>Netzwerk &amp; Infrastruktur</h3>
+                <p>Stabiles Firmennetzwerk für Büro, Werkstatt und Lager. WLAN, VPN, Firewall – geplant, installiert, dokumentiert.</p>
             </div>
             <div class="service-card">
-                <div class="icon">🛡️</div>
-                <h3>Datensicherung & Sicherheit</h3>
-                <p>Backup-Strategie mit getesteter Wiederherstellung, Sicherheits-Audit, Virenschutz, Passwort-Management. Damit Ihre Daten wirklich geschützt sind.</p>
+                <div class="card-icon">🏗️</div>
+                <h3>Produktions-IT</h3>
+                <p>CNC, CAD/CAM, 3D-Drucker, Fräsen, MES, ERP. Ich verbinde Maschine und Büro, weil ich beides kenne.</p>
             </div>
             <div class="service-card">
-                <div class="icon">🏗️</div>
-                <h3>IT für Werkstatt & Produktion</h3>
-                <p>CNC, MES, Maschinensteuerung, Produktionsrechner. Ich verbinde Ihre Produktions-IT mit dem Büro – weil ich beides verstehe.</p>
+                <div class="card-icon">🛡️</div>
+                <h3>Sicherheit &amp; Backup</h3>
+                <p>Datensicherung mit getesteter Wiederherstellung. Sicherheits-Audit, Virenschutz, Passwort-Management.</p>
             </div>
             <div class="service-card">
-                <div class="icon">📦</div>
-                <h3>Beschaffung & Planung</h3>
-                <p>Neue PCs, Bildschirme, Server? Ich berate, beschaffe und installiere – abgestimmt auf Ihren Betrieb, ohne Provision.</p>
+                <div class="card-icon">☁️</div>
+                <h3>Cloud &amp; Integration</h3>
+                <p>Microsoft 365, Google Workspace, branchenspezifische Software. Ich integriere, was zu Ihrem Betrieb passt.</p>
             </div>
             <div class="service-card">
-                <div class="icon">📋</div>
-                <h3>Langfristige Betreuung</h3>
-                <p>Regelmässige Wartung, Sicherheits-Audits und Notfall-Support – ohne Vertragsbindung. Sie entscheiden, wann Sie mich brauchen.</p>
+                <div class="card-icon">📋</div>
+                <h3>Beratung &amp; Beschaffung</h3>
+                <p>Welcher Server? Welches ERP? Welcher Integrator? Ich berate unabhängig und empfehle die richtigen Partner.</p>
             </div>
         </div>
     </div>
 </section>
 
-<!-- WHY ME -->
-<section style="background: var(--bg-alt);">
+<!-- DIFFERENTIATOR -->
+<section class="diff">
     <div class="container">
-        <h2 class="section-title">Warum BitMan?</h2>
+        <span class="section-label">Warum BitMan</span>
+        <h2 class="section-title">Ein IT-Mensch, der die Produktion versteht</h2>
         <p class="section-sub">Was mich von einer klassischen IT-Firma unterscheidet.</p>
-        <div class="why-grid">
-            <div class="why-text">
-                <h3>Vom Werk auf die Baustelle</h3>
-                <p>Ich komme aus der Fertigung. Ich kenne den Alltag: Wenn der CNC‑Rechner ausfällt, steht die Produktion still. Wenn das ERP am Freitag abstürzt, ist die Montagslieferung gefährdet. Dieses Verständnis bringt kein reiner IT-Dienstleister mit.</p>
-                <h3 style="margin-top: 1.5rem;">Enterprise-Wissen für Ihren Betrieb</h3>
-                <p>Bei Google, Roche und Hilti habe ich komplexe IT-Systeme gebaut. Dieses Wissen bringe ich jetzt zu Ihnen – ohne den Overhead einer grossen IT-Firma.</p>
-                <h3 style="margin-top: 1.5rem;">Vor Ort in 20 Minuten</h3>
-                <p>Kein Callcenter, keine Warteschlange. Sie rufen an, ich komme vorbei. Persönlich und direkt: so arbeite ich.</p>
+        <div class="diff-grid">
+            <div>
+                <div class="diff-point">
+                    <h3>12 Jahre IT-Leiter in der Fertigung</h3>
+                    <p>Nicht nur Server, sondern CNC-Maschinen, Lagerverwaltung, Lean Manufacturing. Ich kenne Ihren Alltag.</p>
+                </div>
+                <div class="diff-point">
+                    <h3>Enterprise-Wissen für KMU</h3>
+                    <p>Was ich bei Google, Roche und Hilti gelernt habe, setze ich für Sie ein – ohne den Preis und Overhead einer Grossfirma.</p>
+                </div>
+                <div class="diff-point">
+                    <h3>Unabhängige Beratung</h3>
+                    <p>Ich verkaufe keine Produkte. Ich sage Ihnen, welche Technologie, welcher Integrator und welcher Partner zu Ihrem Betrieb passt.</p>
+                </div>
+                <div class="diff-point">
+                    <h3>Eine Person, eine Beziehung</h3>
+                    <p>Sie reden immer mit mir. Kein Ticket-System, kein Callcenter, kein Praktikant. Wenn Sie anrufen, nehme ich ab.</p>
+                </div>
             </div>
-            <div class="why-stats" style="position: relative;">
-                <img src="img/bitman-audit.png" alt="IT-Audit und Qualitätskontrolle" style="width: 100%; border-radius: 12px; margin-bottom: 1.5rem; grid-column: 1 / -1;" loading="lazy">
-                <div class="stat">
-                    <div class="stat-number">30</div>
-                    <div class="stat-label">Jahre Erfahrung</div>
+            <div class="diff-stats">
+                <div class="stat-box">
+                    <div class="num">25+</div>
+                    <div class="label">Jahre IT &amp; Produktion</div>
                 </div>
-                <div class="stat">
-                    <div class="stat-number">MBA</div>
-                    <div class="stat-label">Business & Management</div>
+                <div class="stat-box">
+                    <div class="num">12</div>
+                    <div class="label">Jahre IT-Leiter Fertigung</div>
                 </div>
-                <div class="stat">
-                    <div class="stat-number">Bern</div>
-                    <div class="stat-label">Vor Ort, persönlich</div>
+                <div class="stat-box">
+                    <div class="num">MBA</div>
+                    <div class="label">Business &amp; Management</div>
                 </div>
-                <div class="stat">
-                    <div class="stat-number">∅</div>
-                    <div class="stat-label">Ohne Vertrag</div>
+                <div class="stat-box">
+                    <div class="num">0</div>
+                    <div class="label">Vertragsbindung</div>
                 </div>
             </div>
         </div>
     </div>
 </section>
 
-<!-- FREE AUDIT CTA -->
-<section class="audit" id="audit">
+<!-- APPROACH -->
+<section>
     <div class="container">
-        <h2>Unverbindliche Standortbestimmung</h2>
-        <p>Kein Verkaufsgespräch: ein klarer Blick von aussen auf Ihre IT. Ich komme vorbei, schaue mir alles an und sage Ihnen ehrlich, wo Sie stehen.</p>
-        <div class="audit-steps">
-            <div class="audit-step">
-                <div class="num">1</div>
-                <h4>Kurz anrufen</h4>
-                <p>078 748 23 77</p>
+        <span class="section-label">So arbeite ich</span>
+        <h2 class="section-title">Drei Schritte, kein Verkaufsgespräch</h2>
+        <p class="section-sub">Unkompliziert, ehrlich, schnell.</p>
+        <div class="approach-steps">
+            <div class="step">
+                <div class="step-num">1</div>
+                <h3>Sie rufen an</h3>
+                <p>Kurzes Gespräch am Telefon. Sie schildern die Situation, ich sage Ihnen, ob und wie ich helfen kann.</p>
             </div>
-            <div class="audit-step">
-                <div class="num">2</div>
-                <h4>Besuch vor Ort</h4>
-                <p>Ich schaue mir alles an</p>
+            <div class="step">
+                <div class="step-num">2</div>
+                <h3>Ich komme vorbei</h3>
+                <p>Vor Ort schaue ich mir alles an – Netzwerk, Server, Arbeitsplätze, Maschinen. Ich sehe, was Sie brauchen.</p>
             </div>
-            <div class="audit-step">
-                <div class="num">3</div>
-                <h4>Massnahmenplan</h4>
-                <p>Sie entscheiden</p>
+            <div class="step">
+                <div class="step-num">3</div>
+                <h3>Sie entscheiden</h3>
+                <p>Ich erstelle einen klaren Massnahmenplan mit Prioritäten. Was dringend ist, mache ich sofort. Den Rest, wenn Sie bereit sind.</p>
             </div>
         </div>
-        <a href="tel:+41787482377" class="hero-cta">Jetzt anrufen: 078 748 23 77</a>
     </div>
+</section>
+
+<!-- CTA BAND -->
+<section class="cta-band">
+    <h2>Ihre Produktion muss laufen. Ich sorge dafür.</h2>
+    <p>Unverbindliches Erstgespräch – ich sage Ihnen ehrlich, wo Sie stehen und was zu tun ist.</p>
+    <a href="tel:+41787482377" class="btn-white">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="width:18px;height:18px"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>
+        078 748 23 77
+    </a>
 </section>
 
 <!-- CONTACT -->
 <section class="contact" id="kontakt">
     <div class="container">
-        <h2 class="section-title">Kontakt</h2>
-        <p class="section-sub">Ein Anruf oder eine Nachricht genügt: ich melde mich noch am gleichen Tag.</p>
+        <span class="section-label">Kontakt</span>
+        <h2 class="section-title">Schreiben Sie mir</h2>
+        <p class="section-sub">Oder rufen Sie einfach an – ich melde mich noch am gleichen Tag.</p>
         <div class="contact-grid">
             <div class="contact-info">
                 <h3>Janusz Nowakowski</h3>
-                <p>BitMan – Ihr persönlicher IT-Partner in der Region Bern.</p>
-                <div class="contact-detail">
-                    <span class="icon">📧</span>
-                    <span style="color: var(--accent); cursor: pointer; user-select: all;" onclick="copyEmail(this)">jnowakowski@gmail.com</span>
-                </div>
+                <p>IT-Infrastruktur für Produktion und Gewerbe.<br>Persönlich, vor Ort, ohne Vertrag.</p>
                 <div class="contact-detail">
                     <span class="icon">📱</span>
-                    <a href="tel:+41787482377" style="color: var(--text); text-decoration: none; font-weight: 600;">+41 78 748 23 77</a>
+                    <a href="tel:+41787482377" style="color: var(--dark); text-decoration: none; font-weight: 600;">+41 78 748 23 77</a>
                 </div>
                 <div class="contact-detail">
-                    <span class="icon" style="color: #25D366; font-size: 1.3rem;">💬</span>
+                    <span class="icon">📧</span>
+                    <span style="color: var(--red); cursor: pointer; user-select: all;" onclick="copyEmail(this)">jnowakowski@gmail.com</span>
+                </div>
+                <div class="contact-detail">
+                    <span class="icon" style="background: #E8F5E9;">💬</span>
                     <a href="https://wa.me/41787482377" target="_blank" style="color: #25D366; font-weight: 600; text-decoration: none;">WhatsApp schreiben</a>
                 </div>
                 <div class="contact-detail">
                     <span class="icon">📍</span>
-                    <span>Region Bern – Vor-Ort-Service</span>
+                    <span>Berner Oberland · Jura · Wallis</span>
                 </div>
-                <div style="margin-top: 2rem; padding: 1.5rem; background: white; border-radius: 12px; border: 1px solid var(--border);">
-                    <p style="font-weight: 700; margin-bottom: 0.5rem;">CloudIndustry GmbH</p>
-                    <p style="font-size: 0.85rem; color: var(--text-light);">IT Engineering & Consulting seit 2004</p>
+                <div style="margin-top: 1.5rem; padding: 1.2rem; background: white; border-radius: 10px; border: 1px solid var(--border);">
+                    <p style="font-weight: 700; font-size: 0.9rem; margin-bottom: 0.3rem; color: var(--dark);">CloudIndustry GmbH</p>
+                    <p style="font-size: 0.82rem; color: var(--text-light);">IT Engineering &amp; Consulting seit 2004</p>
                 </div>
             </div>
             <form class="contact-form" action="https://formspree.io/f/mgolkoer" method="POST">
@@ -505,24 +589,23 @@
                 <input type="text" name="name" placeholder="Ihr Name" required>
                 <input type="email" name="email" placeholder="E-Mail" required>
                 <input type="tel" name="telefon" placeholder="Telefon (optional)">
-                <textarea name="nachricht" placeholder="Wie kann ich Ihnen helfen? (optional)"></textarea>
-                <button type="submit">Unverbindlich anfragen</button>
+                <textarea name="nachricht" placeholder="Wie kann ich Ihnen helfen?"></textarea>
+                <button type="submit">Nachricht senden</button>
             </form>
         </div>
     </div>
 </section>
 
 <footer>
-    <div style="max-width: 800px; margin: 0 auto;">
-        <p>&copy; 2026 BitMan – IT-Support für Gewerbe und Produktion | <a href="mailto:jnowakowski@gmail.com">jnowakowski@gmail.com</a></p>
-        <p style="margin-top: 0.5rem;">Ein Service von <a href="https://cloudindustry.ch" style="color: rgba(255,255,255,0.8);">CloudIndustry GmbH</a> | Bern, Schweiz</p>
-        <p style="margin-top: 0.3rem; font-size: 0.85rem;"><a href="https://cloudindustry.ch/karte/" style="color: rgba(255,255,255,0.6);">Firmenverzeichnis Schweizer Maschinenbau</a></p>
-        <div style="margin-top: 2rem; padding-top: 1.5rem; border-top: 1px solid rgba(255,255,255,0.15); font-size: 0.8rem; text-align: left;">
-            <p style="font-weight: 600; color: rgba(255,255,255,0.9); margin-bottom: 0.8rem;">Impressum</p>
-            <p>CloudIndustry<br>Janusz Nowakowski<br>3000 Bern, Schweiz</p>
-            <p style="margin-top: 0.5rem;">E-Mail: jnowakowski@gmail.com<br>Telefon: +41 78 748 23 77</p>
-            <p style="margin-top: 1rem; font-weight: 600; color: rgba(255,255,255,0.9); margin-bottom: 0.5rem;">Datenschutz</p>
-            <p>Diese Website verwendet Google Analytics zur Analyse der Websitenutzung. Die erhobenen Daten werden anonymisiert und nicht an Dritte weitergegeben. Durch die Nutzung dieser Website erklären Sie sich mit der Verarbeitung der über Sie erhobenen Daten einverstanden. Kontaktformulardaten werden über Formspree verarbeitet und ausschliesslich zur Bearbeitung Ihrer Anfrage verwendet.</p>
+    <div class="footer-inner">
+        <p>&copy; 2026 BitMan – IT-Infrastruktur für Produktion &amp; Gewerbe</p>
+        <p style="margin-top: 0.4rem;">Ein Service von <a href="https://cloudindustry.ch">CloudIndustry GmbH</a> · Bern, Schweiz · <a href="https://cloudindustry.ch/karte/">Firmenverzeichnis Schweizer Maschinenbau</a></p>
+        <div style="margin-top: 1.5rem; padding-top: 1.2rem; border-top: 1px solid rgba(255,255,255,0.1); text-align: left;">
+            <p style="font-weight: 600; color: rgba(255,255,255,0.8); margin-bottom: 0.5rem;">Impressum</p>
+            <p>CloudIndustry · Janusz Nowakowski · 3000 Bern, Schweiz</p>
+            <p style="margin-top: 0.3rem;">E-Mail: jnowakowski@gmail.com · Telefon: +41 78 748 23 77</p>
+            <p style="margin-top: 1rem; font-weight: 600; color: rgba(255,255,255,0.8); margin-bottom: 0.4rem;">Datenschutz</p>
+            <p>Diese Website verwendet Google Analytics zur Analyse der Websitenutzung. Die erhobenen Daten werden anonymisiert und nicht an Dritte weitergegeben. Kontaktformulardaten werden über Formspree verarbeitet und ausschliesslich zur Bearbeitung Ihrer Anfrage verwendet.</p>
         </div>
     </div>
 </footer>
@@ -535,26 +618,23 @@
         }
     }
 
-    window.copyEmail = function(btn){
+    window.copyEmail = function(el){
         navigator.clipboard.writeText('jnowakowski@gmail.com').then(function(){
-            if(btn && btn.dataset){
-                var orig = btn.textContent;
-                btn.textContent = 'Kopiert!';
-                setTimeout(function(){ btn.textContent = orig; },1500);
-            }
+            var orig = el.textContent;
+            el.textContent = 'Kopiert!';
+            setTimeout(function(){ el.textContent = orig; }, 1500);
             trackEvent('email_copy','jnowakowski@gmail.com');
-        }).catch(function(){ trackEvent('email_copy_failed','jnowakowski@gmail.com'); });
+        }).catch(function(){});
     };
 
-    // Track click-to-call and WhatsApp
     document.addEventListener('DOMContentLoaded', function(){
         document.querySelectorAll('a[href^="tel:"]').forEach(function(a){
             a.addEventListener('click', function(){ trackEvent('click_to_call', a.getAttribute('href')); });
         });
-        document.querySelectorAll('a[href*="wa.me"], a[href*="whatsapp"]').forEach(function(a){
+        document.querySelectorAll('a[href*="wa.me"]').forEach(function(a){
             a.addEventListener('click', function(){ trackEvent('click_whatsapp', a.getAttribute('href')); });
         });
-        document.querySelectorAll('.hero-cta').forEach(function(a){
+        document.querySelectorAll('.btn-primary, .btn-secondary, .btn-white').forEach(function(a){
             a.addEventListener('click', function(){ trackEvent('click_cta', a.textContent.trim()); });
         });
         var form = document.querySelector('.contact-form');
@@ -562,19 +642,16 @@
             form.addEventListener('submit', function(){ trackEvent('contact_form_submit','formspree'); });
         }
 
-        // Personalization from URL params (e.g. ?company=Gebr.%20M%C3%BCller)
         try{
             var params = new URLSearchParams(location.search);
             var company = params.get('company');
             if(company){
-                var badge = document.querySelector('.hero-badge');
-                if(badge){
+                var region = document.querySelector('.hero-region');
+                if(region){
                     var p = document.createElement('p');
-                    p.style.marginTop = '0.5rem';
-                    p.style.fontWeight = '600';
-                    p.style.color = 'var(--primary)';
-                    p.textContent = 'Hallo ' + company + ': kurze Frage zur Werkstatt‑IT.';
-                    badge.insertAdjacentElement('afterend', p);
+                    p.style.cssText = 'margin-top:0.5rem;font-weight:600;color:var(--dark);font-size:1rem;';
+                    p.textContent = 'Hallo ' + company + ' \u2013 kurze Frage zur Werkstatt-IT.';
+                    region.insertAdjacentElement('afterend', p);
                     trackEvent('personalized_landing', company);
                 }
             }
