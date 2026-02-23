@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IT für Produktion – CNC, ERP, Werkstatt-Netzwerk | BitMan</title>
+    <meta name="description" content="IT-Support für Produktionsbetriebe im Berner Oberland, Wallis und Jura. CNC-Anbindung, Werkstatt-Netzwerk, ERP-Integration. Von jemandem, der 15 Jahre in der Fertigung war.">
+    <link rel="canonical" href="https://bitman.ch/it-fuer-produktion/">
+    <!-- Open Graph -->
+    <meta property="og:title" content="IT für Produktion – CNC, ERP, Werkstatt-Netzwerk | BitMan">
+    <meta property="og:description" content="IT-Support für Produktionsbetriebe. CNC-Anbindung, Werkstatt-Netzwerk, ERP-Integration. Von jemandem, der 15 Jahre in der Fertigung war.">
+    <meta property="og:url" content="https://bitman.ch/it-fuer-produktion/">
+    <meta property="og:type" content="website">
+    <meta property="og:locale" content="de_CH">
+    <meta property="og:site_name" content="BitMan">
+    <meta property="og:image" content="https://bitman.ch/img/logo.png">
+    <meta name="twitter:card" content="summary">
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-5SFLV35LLW"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-5SFLV35LLW');
+    </script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+        :root {
+            --red: #E2001A; --red-hover: #C4001A; --red-light: #FFF0F1;
+            --dark: #1A1A1A; --text: #333333; --text-light: #666666;
+            --bg: #FFFFFF; --bg-warm: #FAFAFA; --border: #E8E8E8;
+        }
+        body { font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif; color: var(--text); line-height: 1.65; -webkit-font-smoothing: antialiased; background: var(--bg); }
+        nav { position: fixed; top: 0; width: 100%; z-index: 100; background: rgba(255,255,255,0.97); backdrop-filter: blur(12px); border-bottom: 1px solid var(--border); padding: 0.8rem 2rem; display: flex; justify-content: space-between; align-items: center; }
+        .logo { display: flex; align-items: center; text-decoration: none; gap: 0.6rem; }
+        .logo-img { height: 36px; width: auto; }
+        .nav-actions { display: flex; align-items: center; gap: 0.8rem; }
+        .nav-link { display: flex; align-items: center; gap: 0.35rem; color: var(--text); text-decoration: none; font-size: 0.82rem; font-weight: 500; padding: 0.4rem 0.6rem; border-radius: 6px; transition: background 0.2s; }
+        .nav-link:hover { background: var(--bg-warm); }
+        .nav-link svg { width: 16px; height: 16px; }
+        .nav-link.whatsapp { color: #25D366; }
+        nav a.cta-nav { background: var(--red); color: white; padding: 0.5rem 1.2rem; border-radius: 6px; text-decoration: none; font-weight: 600; font-size: 0.85rem; transition: background 0.2s; }
+        nav a.cta-nav:hover { background: var(--red-hover); }
+
+        .page-content { max-width: 760px; margin: 0 auto; padding: 7rem 2rem 4rem; }
+        .breadcrumb { font-size: 0.8rem; color: var(--text-light); margin-bottom: 2rem; }
+        .breadcrumb a { color: var(--red); text-decoration: none; }
+        .page-content h1 { font-size: clamp(1.6rem, 3.5vw, 2.2rem); font-weight: 800; color: var(--dark); margin-bottom: 1.5rem; line-height: 1.2; letter-spacing: -0.02em; }
+        .page-content h2 { font-size: 1.3rem; font-weight: 700; color: var(--dark); margin-top: 2.5rem; margin-bottom: 0.8rem; }
+        .page-content p { font-size: 1.02rem; line-height: 1.8; margin-bottom: 1.2rem; color: var(--text); }
+        .page-content strong { color: var(--dark); }
+
+        .scenario { background: var(--bg-warm); border-left: 3px solid var(--red); padding: 1.3rem 1.5rem; margin: 1.5rem 0; border-radius: 0 8px 8px 0; }
+        .scenario p { margin-bottom: 0.5rem; }
+        .scenario p:last-child { margin-bottom: 0; }
+
+        .services-list { margin: 2rem 0; }
+        .service-item { padding: 1.2rem 0; border-bottom: 1px solid var(--border); }
+        .service-item:last-child { border-bottom: none; }
+        .service-item h3 { font-size: 1rem; font-weight: 700; color: var(--dark); margin-bottom: 0.3rem; }
+        .service-item p { font-size: 0.92rem; color: var(--text-light); margin-bottom: 0; line-height: 1.6; }
+
+        .cta-box { background: var(--bg-warm); border: 1px solid var(--border); border-radius: 10px; padding: 2rem; margin-top: 3rem; text-align: center; }
+        .cta-box h3 { font-size: 1.2rem; font-weight: 700; color: var(--dark); margin-bottom: 0.5rem; }
+        .cta-box p { color: var(--text-light); margin-bottom: 1.2rem; }
+        .btn-primary { display: inline-flex; align-items: center; gap: 0.4rem; background: var(--red); color: white; padding: 0.85rem 1.8rem; border-radius: 8px; text-decoration: none; font-weight: 700; font-size: 1rem; transition: all 0.2s; }
+        .btn-primary:hover { background: var(--red-hover); }
+
+        .red-line { height: 3px; background: var(--red); width: 100%; }
+
+        .inline-link { color: var(--red); text-decoration: none; font-weight: 600; }
+        .inline-link:hover { text-decoration: underline; }
+
+        footer { background: var(--dark); color: rgba(255,255,255,0.5); padding: 2rem; font-size: 0.8rem; }
+        footer a { color: rgba(255,255,255,0.7); text-decoration: none; }
+        footer a:hover { color: white; }
+        .footer-inner { max-width: 920px; margin: 0 auto; }
+
+        @media (max-width: 768px) {
+            .page-content { padding: 5.5rem 1.5rem 3rem; }
+            .nav-actions { gap: 0.3rem; }
+            .nav-link.phone-link { display: none; }
+        }
+    </style>
+</head>
+<body>
+
+<nav>
+    <a href="/" class="logo">
+        <img src="/img/logo.png" alt="BitMan – IT für Produktion und Gewerbe" class="logo-img">
+    </a>
+    <div class="nav-actions">
+        <a href="/it-fuer-produktion/" class="nav-link" title="Produktions-IT">Produktions-IT</a>
+        <a href="/ueber-mich/" class="nav-link" title="Über mich">Über mich</a>
+        <a href="tel:+41787482377" class="nav-link phone-link" title="Anrufen">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>
+            <span>078 748 23 77</span>
+        </a>
+        <a href="https://wa.me/41787482377" target="_blank" class="nav-link whatsapp" title="WhatsApp">
+            <svg viewBox="0 0 24 24" fill="currentColor" style="width:16px;height:16px"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+            <span>WhatsApp</span>
+        </a>
+        <a href="/#kontakt" class="cta-nav">Kontakt</a>
+    </div>
+</nav>
+
+<div class="page-content">
+    <p class="breadcrumb"><a href="/">BitMan</a> › IT für Produktion</p>
+
+    <h1>Wenn die Fräse steht, wartet der Kunde nicht.</h1>
+
+    <p>Eine CNC-Maschine, die nicht fräst, kostet Sie nicht nur die Stunde. Sie kostet den Liefertermin, den Folgeauftrag, den Ruf. Ich habe das 15 Jahre lang miterlebt. Nicht als externer IT-Berater, der reinkommt und wieder geht. Als IT-Leiter, der morgens um sechs in der Werkstatt stand und dafür gesorgt hat, dass die erste Schicht loslegen konnte.</p>
+
+    <p>Die meisten IT-Firmen kommen aus der Bürowelt. Sie kennen Outlook, Teams, vielleicht noch einen Fileserver. Aber wenn Sie sagen "Die Heidenhain-Steuerung kriegt keine Verbindung zum DNC-Server", schauen sie Sie an, als hätten Sie Chinesisch gesprochen.</p>
+
+    <p>Bei mir ist das anders. Ich habe Heidenhain, Fanuc und Siemens-Steuerungen ans Netzwerk angebunden. Ich habe CAD/CAM-Arbeitsplätze aufgesetzt, bei denen eine SolidWorks-Baugruppe mit 4000 Teilen in unter 30 Sekunden öffnet. Und ich habe dafür gesorgt, dass das ERP die richtigen Stücklisten an die Maschine schickt.</p>
+
+    <h2>Was in der Werkstatt anders ist</h2>
+
+    <p>Ein Büro-PC, der abstürzt, ist ärgerlich. Eine CAD-Station, die abstürzt, verliert drei Stunden Konstruktionsarbeit. Ein Produktionsrechner, der ausfällt, stoppt die Fräse. Und eine Fräse, die steht, stoppt die Lieferung.</p>
+
+    <p>Diese Kette versteht nicht jeder. Ich schon. Ich komme aus der Lean-Welt. Ich weiss, was Taktzeit ist, was OEE bedeutet, warum ein ungeplanter Stillstand die gesamte Planung durcheinanderbringt. IT in der Produktion ist kein Nebenschauplatz. Wenn die IT nicht funktioniert, funktioniert der Betrieb nicht.</p>
+
+    <div class="scenario">
+        <p><strong>Typisches Beispiel:</strong> Ein Metallbaubetrieb im Berner Oberland. 18 Mitarbeiter. Drei CNC-Fräsen, ein alter Server im Keller, Netzwerk "irgendwann mal" eingerichtet. Backups auf einer externen Festplatte, die seit Monaten nicht angeschlossen war. Kein WLAN in der Werkstatt, also tippt der Werkstattleiter Masse von Hand in die Steuerung ab, statt sie direkt vom CAD zu übernehmen.</p>
+        <p>Ich habe dort in zwei Tagen ein sauberes Netzwerk gezogen, die Maschinen über DNC angebunden, den Server gesichert und ein Backup eingerichtet, das tatsächlich läuft. Gesamtkosten: ein Bruchteil dessen, was ein einziger verlorener Auftrag gekostet hätte.</p>
+    </div>
+
+    <h2>Konkret: was ich in Ihrem Betrieb mache</h2>
+
+    <div class="services-list">
+        <div class="service-item">
+            <h3>CNC-Anbindung und DNC</h3>
+            <p>Programme direkt vom CAD/CAM an die Maschine. Heidenhain, Fanuc, Siemens. Kein USB-Stick, kein Abtippen. Sicher, nachvollziehbar, versioniert.</p>
+        </div>
+        <div class="service-item">
+            <h3>Werkstatt-Netzwerk</h3>
+            <p>Netzwerk, das für die Werkstatt gebaut ist. Staub, Vibrationen, Feuchtigkeit. Industrietaugliche Switches, saubere Verkabelung, WLAN dort, wo es gebraucht wird. Dokumentiert, damit auch Ihr Nachfolger weiss, was wo hängt.</p>
+        </div>
+        <div class="service-item">
+            <h3>CAD/CAM-Arbeitsplätze</h3>
+            <p>Die richtige Hardware für SolidWorks, Inventor, Mastercam oder was Sie einsetzen. Workstation-GPUs, genug RAM, schneller Storage. Ich konfiguriere so, dass grosse Baugruppen flüssig laufen.</p>
+        </div>
+        <div class="service-item">
+            <h3>ERP-Integration</h3>
+            <p>Abacus, SAP Business One, bexio oder branchenspezifische Lösungen. Ich sorge dafür, dass das ERP mit der Konstruktion, dem Lager und der Maschine spricht. Keine Insellösungen, keine doppelte Datenpflege.</p>
+        </div>
+        <div class="service-item">
+            <h3>Server und Backup</h3>
+            <p>Ihr Fileserver mit den CAD-Zeichnungen, den NC-Programmen und den Kundenaufträgen ist das Herz Ihres Betriebs. Ich sichere es. Täglich. Getestet. Wiederherstellung übe ich mit Ihnen, damit Sie wissen, dass es im Ernstfall funktioniert.</p>
+        </div>
+        <div class="service-item">
+            <h3>IT-Sicherheit für den Betrieb</h3>
+            <p>Ransomware hat 2024 mehrere Schweizer Industriebetriebe lahmgelegt. Wochen Stillstand. Ich richte einfache Massnahmen ein, die den grössten Schaden verhindern: Netzwerksegmentierung, vernünftige Passwörter, Backup-Strategie. Keine Panikmache, kein Verkaufsgespräch für teure Software.</p>
+        </div>
+    </div>
+
+    <h2>Warum nicht eine grosse IT-Firma?</h2>
+
+    <p>Können Sie. Ich habe nichts gegen grosse IT-Firmen. Aber ich habe in 25 Jahren folgendes beobachtet: Sie rufen an, erklären das Problem, werden an jemand anderen weitergeleitet, erklären es nochmal, kriegen ein Ticket, warten drei Tage und am Ende kommt jemand, der die Werkstatt noch nie von innen gesehen hat.</p>
+
+    <p>Bei mir rufen Sie an. Ich nehme ab. Wenn ich helfen kann, sage ich wann ich komme. Wenn nicht, sage ich Ihnen das auch. Kein Vertrag, keine Mindestlaufzeit, kein Callcenter.</p>
+
+    <p>Ich mache das seit über 20 Jahren. Wenn Sie wissen wollen, wie ich arbeite: <a href="/ueber-mich/" class="inline-link">Hier steht mehr über mich</a>.</p>
+
+    <div class="cta-box">
+        <h3>Ihre Maschinen müssen laufen. Ich sorge dafür.</h3>
+        <p>Kostenloses Erstgespräch. Ich schaue mir Ihre Situation an und sage Ihnen ehrlich, wo Sie stehen.</p>
+        <a href="tel:+41787482377" class="btn-primary">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="width:18px;height:18px"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>
+            078 748 23 77
+        </a>
+    </div>
+</div>
+
+<div class="red-line"></div>
+
+<footer>
+    <div class="footer-inner">
+        <p>&copy; 2026 BitMan – IT-Infrastruktur für Produktion &amp; Gewerbe</p>
+        <p style="margin-top: 0.4rem;">Ein Service von <a href="https://cloudindustry.ch">CloudIndustry GmbH</a> · Bern, Schweiz · <a href="https://cloudindustry.ch/karte/">Firmenverzeichnis Schweizer Maschinenbau</a></p>
+    </div>
+</footer>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Service",
+  "name": "Produktions-IT für KMU",
+  "description": "IT-Infrastruktur für Produktionsbetriebe: CNC-Anbindung, Werkstatt-Netzwerk, ERP-Integration, Server, Backup und IT-Sicherheit.",
+  "provider": {
+    "@type": "LocalBusiness",
+    "name": "BitMan",
+    "url": "https://bitman.ch"
+  },
+  "areaServed": [
+    {"@type": "Place", "name": "Berner Oberland"},
+    {"@type": "Place", "name": "Wallis"},
+    {"@type": "Place", "name": "Jura"},
+    {"@type": "Place", "name": "Bern"}
+  ],
+  "serviceType": ["IT-Support", "CNC-Anbindung", "Werkstatt-Netzwerk", "ERP-Integration", "IT-Sicherheit", "Backup"]
+}
+</script>
+</body>
+</html>
