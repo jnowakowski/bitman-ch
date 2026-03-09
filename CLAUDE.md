@@ -10,7 +10,7 @@ This site is part of a 3-property SEO network. See `/Users/orion/_lab/SEO-CROSS-
 Key links from this site:
 - **Footer**: "CloudIndustry" links to cloudindustry.ch
 - **Footer**: "Firmenverzeichnis Schweizer Maschinenbau" links to cloudindustry.ch/karte/
-- GA4: `G-5SFLV35LLW` (separate from CloudIndustry/Karte)
+- GTM: `GTM-TLLQVV7Z` (shared container, delivers GA4 G-16TNFTJZJJ + Matomo Site ID 2)
 
 ## Repo
 `github.com:jnowakowski/bitman-ch.git`
