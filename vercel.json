@@ -1,3 +1,7 @@
 {
-  "trailingSlash": true
+  "trailingSlash": true,
+  "redirects": [
+    { "source": "/region", "destination": "/", "permanent": true },
+    { "source": "/region/", "destination": "/", "permanent": true }
+  ]
 }
