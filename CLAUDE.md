@@ -1,8 +1,18 @@
 # BitMan: bitman.ch
 
 ## What
-Single-page landing for IT-Support targeting Swiss manufacturing SME owners ("Patron" persona).
-Static HTML, hosted on Vercel.
+Multilingual technology services website for small and medium businesses.
+One offer: consulting, software/websites, integration/automation, setup, backup and security.
+Businesses focus on their product; Janusz turns their needs into working technology.
+Wineries are one example application, not a separate offer or brand specialization.
+Static HTML, hosted on Vercel. German at `/`, French at `/fr/`, English at `/en/`.
+Shared styles: `style.css`; shared imagery: `assets/`. Existing sector/region pages are retained.
+Keep all three language pages in sync. No universal fixed starting price or fear-based positioning.
+
+## Content and imagery
+Workshop photo is an AI-generated illustration, explicitly labelled. Portrait is user-supplied.
+Google, Roche, Hilti and BIS refer to prior professional experience, not BitMan client references.
+Preserve canonical/hreflang metadata, existing OG logo and localized contact links.
 
 ## SEO Cross-Linking
 This site is part of a 3-property SEO network. See `/Users/orion/_lab/SEO-CROSS-LINKING.md` for the full link map.

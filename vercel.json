@@ -1,7 +1,25 @@
 {
   "trailingSlash": true,
   "redirects": [
-    { "source": "/region", "destination": "/", "permanent": true },
-    { "source": "/region/", "destination": "/", "permanent": true }
+    {
+      "source": "/region",
+      "destination": "/",
+      "permanent": true
+    },
+    {
+      "source": "/region/",
+      "destination": "/",
+      "permanent": true
+    },
+    {
+      "source": "/en.html",
+      "destination": "/en/",
+      "permanent": true
+    },
+    {
+      "source": "/fr.html",
+      "destination": "/fr/",
+      "permanent": true
+    }
   ]
 }

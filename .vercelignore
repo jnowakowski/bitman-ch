@@ -1,0 +1,5 @@
+.git
+.gstack
+.env*
+CLAUDE.md
+__pycache__
