@@ -8,7 +8,7 @@ if out.exists():
     shutil.rmtree(out)
 out.mkdir()
 files = ["index.html", "style.css", "favicon.svg", "robots.txt", "sitemap.xml", "_redirects"]
-folders = ["assets", "img", "en", "fr", "it-fuer-produktion", "ueber-mich", "region"]
+folders = ["assets", "img", "en", "fr", "it-fuer-produktion", "ueber-mich", "region", "it-beratung-kmu", "integration-automatisierung"]
 for name in files:
     shutil.copy2(root / name, out / name)
 for name in folders:

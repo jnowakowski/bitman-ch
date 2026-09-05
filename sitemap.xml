@@ -8,25 +8,25 @@
   </url>
   <url>
     <loc>https://bitman.ch/it-fuer-produktion/</loc>
-    <lastmod>2026-08-18</lastmod>
+    <lastmod>2026-09-05</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
     <loc>https://bitman.ch/ueber-mich/</loc>
-    <lastmod>2026-02-23</lastmod>
+    <lastmod>2026-09-05</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://bitman.ch/region/berner-oberland/</loc>
-    <lastmod>2026-02-23</lastmod>
+    <lastmod>2026-09-05</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://bitman.ch/region/wallis/</loc>
-    <lastmod>2026-02-23</lastmod>
+    <lastmod>2026-09-05</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
@@ -41,5 +41,29 @@
     <lastmod>2026-09-05</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://bitman.ch/it-beratung-kmu/</loc>
+    <lastmod>2026-09-05</lastmod>
+  </url>
+  <url>
+    <loc>https://bitman.ch/integration-automatisierung/</loc>
+    <lastmod>2026-09-05</lastmod>
+  </url>
+  <url>
+    <loc>https://bitman.ch/fr/conseil-informatique-pme/</loc>
+    <lastmod>2026-09-05</lastmod>
+  </url>
+  <url>
+    <loc>https://bitman.ch/fr/integration-automatisation/</loc>
+    <lastmod>2026-09-05</lastmod>
+  </url>
+  <url>
+    <loc>https://bitman.ch/en/it-consulting/</loc>
+    <lastmod>2026-09-05</lastmod>
+  </url>
+  <url>
+    <loc>https://bitman.ch/en/integration-automation/</loc>
+    <lastmod>2026-09-05</lastmod>
   </url>
 </urlset>

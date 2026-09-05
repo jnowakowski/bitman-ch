@@ -6,7 +6,8 @@ One offer: consulting, software/websites, integration/automation, setup, backup 
 Businesses focus on their product; Janusz turns their needs into working technology.
 Wineries are one example application, not a separate offer or brand specialization.
 Static HTML, hosted on Cloudflare Workers Static Assets. German at `/`, French at `/fr/`, English at `/en/`.
-Shared styles: `style.css`; shared imagery: `assets/`. Existing sector/region pages are retained.
+Shared styles: `style.css`; shared imagery: `assets/`. Existing sector/region URLs are retained and use the calm current offer.
+Service pages: /it-beratung-kmu/ and /integration-automatisierung/, with corresponding /fr/ and /en/ versions. See docs/measurement.md for contact events.
 Keep all three language pages in sync. No universal fixed starting price or fear-based positioning.
 
 ## Content and imagery
@@ -46,6 +47,13 @@ Cloudflare routes `bitman.ch/*` and `www.bitman.ch/*` serve all static assets di
 DNS: proxied apex A `192.0.2.0` (reserved placeholder; no origin server), proxied www CNAME `bitman.ch`.
 Do not remove these Worker routes without replacing the site routing.
 Mail MX/TXT records are independent and must be preserved.
+
+## Validation
+```bash
+python3 scripts/build-static.py
+python3 scripts/verify-static.py
+node scripts/test-contact.cjs
+```
 
 ## Local dev
 ```bash
