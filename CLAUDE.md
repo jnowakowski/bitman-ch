@@ -10,7 +10,7 @@ Shared styles: `style.css`; shared imagery: `assets/`. Existing sector/region pa
 Keep all three language pages in sync. No universal fixed starting price or fear-based positioning.
 
 ## Content and imagery
-Workshop photo is an AI-generated illustration, explicitly labelled. Portrait is user-supplied.
+Hero photograph (`assets/team.jpg`) and portrait are user-supplied. The hero shows a discussion in an office; do not describe the pictured people as BitMan employees or clients without confirmation.
 Google, Roche, Hilti and BIS refer to prior professional experience, not BitMan client references.
 Preserve canonical/hreflang metadata, existing OG logo and localized contact links.
 
