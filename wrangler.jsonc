@@ -1,0 +1,25 @@
+{
+  "name": "bitman-ch",
+  "account_id": "e6f898d21e749f4e559f72825c4444d4",
+  "compatibility_date": "2026-09-05",
+  "workers_dev": true,
+  "preview_urls": false,
+  "build": {
+    "command": "python3 scripts/build-static.py"
+  },
+  "assets": {
+    "directory": "./dist",
+    "html_handling": "force-trailing-slash",
+    "not_found_handling": "404-page"
+  },
+  "routes": [
+    {
+      "pattern": "bitman.ch/*",
+      "zone_id": "7ae88565bf26d75846bf87f1599236a4"
+    },
+    {
+      "pattern": "www.bitman.ch/*",
+      "zone_id": "7ae88565bf26d75846bf87f1599236a4"
+    }
+  ]
+}
